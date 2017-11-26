@@ -23,3 +23,10 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/homej', 'HomeController@j')->name('homej');
+Route::resource('task','TaskController');
+Route::resource('product','ProductController');
+Route::get('/newrequisition','RequisitionController@new')->name('newrequisition');
